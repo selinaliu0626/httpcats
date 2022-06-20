@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Vue Mastery</title>
+    <!-- Import Styles -->
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <!-- Import Vue.js -->
+    <script src="https://unpkg.com/vue@3.0.11/dist/vue.global.js"></script>
+  </head>
+  <body>
+
+    <div id="app">
+      <h1 class="title">Http Cats</h1>
+      <img
+              @mouseover="updateCat"
+              class="card"
+              alt="cats"
+              :src="images[current].url"
+      />
+      <p>
+        Check more http cats in <a href="https://http.cat">https://http.cat</a>
+      </p>
+      <p v-if="first" class="warning">This is first picture!</p>
+      <p v-if="last" class="warning">This is last picture!</p>
+      <br />
+      <button @click="addFave" class="fav">Fave</button>
+      <button @click="nextCat" class="next">Next</button>
+      <section class="favorites">
+        <h2>Favorite Cats</h2>
+        <ul class="favorites-list">
+          <li v-for="cat in favorites" :key="cat" class="favorites-item">
+            <img alt="nicecat" :src="cat" class="favorites-img" />
+          </li>
+        </ul>
+      </section>
+      </div>
+
+
+    <!-- Import App -->
+    <script src="./main.js"></script>
+
+    <!-- Mount App -->
+    <script>
+      const mountedApp = app.mount('#app')
+    </script>
+  </body>
+</html>

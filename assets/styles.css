@@ -1,0 +1,77 @@
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+h1 {
+  font-family: "Mukta", sans-serif;
+  font-size: 3em;
+}
+p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1em;
+}
+.warning{
+  color:red;
+}
+body{
+  background-color: lightblue;
+}
+button {
+  width: 70px;
+  height: 70px;
+  margin: 20px 5px;
+  border: 8px solid white;
+  border-radius: 50%;
+  text-align: center;
+  font-weight: bold;
+  color: transparent;
+  cursor: pointer;
+}
+
+.next {
+  grid-area: next;
+  background: url("https://github.com/FrontEndFoxes/curriculum/blob/main/workshops/vue/minis/images/next.jpeg?raw=true")
+  center no-repeat;
+  background-size: 70px;
+}
+.fav {
+  grid-area: fav;
+  background: url("https://github.com/FrontEndFoxes/curriculum/blob/main/workshops/vue/minis/images/heart.png?raw=true")
+  no-repeat center;
+  background-size: 70px;
+  justify-self: end;
+}
+
+.fav:hover,
+.next:hover {
+  opacity: 0.5;
+}
+.favorites {
+  grid-area: favorites;
+  overflow-y: auto;
+}
+
+.favorites-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.favorites-item {
+  position: relative;
+  list-style: none;
+  margin: 15px;
+}
+
+.favorites-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
