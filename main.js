@@ -28,6 +28,7 @@ const app = Vue.createApp({
 
     methods: {
         updateCat() {
+            
             if (this.current >= 1) {
                 this.current -= 1;
             } else {
